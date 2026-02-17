@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Tech Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">YourName</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="reveal">Hi, I'm Your Name</h1>
+          <p class="sub reveal">A tech-focused student building interactive, accessible web experiences.</p>
+          <div class="cta reveal">
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="avatar">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8ec5ff"/><stop offset="1" stop-color="#e0c3fc"/></linearGradient></defs><rect width="120" height="120" rx="16" fill="url(#g)"/><img src="https://4kwallpapers.com/images/wallpapers/pecto-porsche-911-7680x5489-20222.jpg" alt=""></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">About Me</h2>
+        <p class="reveal">I'm a student focused on technology, web development and solving real problems through thoughtful UX and clean code. I follow mobile-first design and enjoy building performant, accessible interfaces.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="projects-grid">
+          <article class="card reveal">
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p>Short description of the project. Tech: HTML, CSS, JS.</p>
+              <div class="card-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small ghost" href="#">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-body">
+              <h3>Project Two</h3>
+              <p>Short description of the project. Tech: React, Node.</p>
+              <div class="card-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small ghost" href="#">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-body">
+              <h3>Project Three</h3>
+              <p>Short description of the project. Tech: Python, ML.</p>
+              <div class="card-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small ghost" href="#">Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <div class="skills-grid reveal">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">React</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">Python</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Contact</h2>
+        <p class="reveal">I'm open to internship and collaboration. Send a message and I'll get back to you.</p>
+        <form class="contact-form reveal" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name — Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
