@@ -3,133 +3,279 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Tech Portfolio</title>
+  <title>Rajath BN — Developer Portfolio</title>
+  <meta name="description" content="Rajath BN — student developer building clean, fast, and accessible web experiences." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#">YourName</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav" id="nav">
-        <a href="#home">Home</a>
+      <a class="logo" href="#home">
+        <span class="logo-mark">R</span>
+        <span class="logo-text">Rajath<span class="dot">.</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#" download>Resume</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section id="home" class="hero section">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1 class="reveal">Hi, I'm Your Name</h1>
-          <p class="sub reveal">A tech-focused student building interactive, accessible web experiences.</p>
+          <span class="eyebrow reveal"><span class="status-dot"></span> Available for internships</span>
+          <h1 class="reveal">
+            Hi, I'm <span class="accent">Rajath BN</span>.<br />
+            I build clean, useful web things.
+          </h1>
+          <p class="sub reveal">
+            A tech-focused student crafting interactive, accessible, and performant interfaces with HTML, CSS, JavaScript, and modern frameworks.
+          </p>
           <div class="cta reveal">
-            <a class="btn" href="#projects">See my work</a>
+            <a class="btn" href="#projects">View my work →</a>
             <a class="btn ghost" href="#contact">Get in touch</a>
           </div>
+          <ul class="hero-meta reveal">
+            <li><strong>3+</strong><span>Projects shipped</span></li>
+            <li><strong>6+</strong><span>Tech stack</span></li>
+            <li><strong>100%</strong><span>Self-taught</span></li>
+          </ul>
         </div>
         <div class="hero-art reveal">
-          <div class="avatar">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8ec5ff"/><stop offset="1" stop-color="#e0c3fc"/></linearGradient></defs><rect width="120" height="120" rx="16" fill="url(#g)"/><img src="https://4kwallpapers.com/images/wallpapers/pecto-porsche-911-7680x5489-20222.jpg" alt=""></svg>
+          <div class="avatar-frame">
+            <div class="avatar">
+              <span class="avatar-initials">RB</span>
+            </div>
+            <div class="floating-badge badge-1">{ }</div>
+            <div class="floating-badge badge-2">&lt;/&gt;</div>
+            <div class="floating-badge badge-3">★</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title reveal">About Me</h2>
-        <p class="reveal">I'm a student focused on technology, web development and solving real problems through thoughtful UX and clean code. I follow mobile-first design and enjoy building performant, accessible interfaces.</p>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Projects</h2>
-        <div class="projects-grid">
-          <article class="card reveal">
-            <div class="card-body">
-              <h3>Project One</h3>
-              <p>Short description of the project. Tech: HTML, CSS, JS.</p>
-              <div class="card-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small ghost" href="#">Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card-body">
-              <h3>Project Two</h3>
-              <p>Short description of the project. Tech: React, Node.</p>
-              <div class="card-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small ghost" href="#">Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card-body">
-              <h3>Project Three</h3>
-              <p>Short description of the project. Tech: Python, ML.</p>
-              <div class="card-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small ghost" href="#">Source</a>
-              </div>
-            </div>
-          </article>
+        <p class="section-eyebrow reveal">01 / About</p>
+        <h2 class="section-title reveal">A quick intro</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a student focused on technology and web development. I enjoy solving real problems through thoughtful UX and clean code,
+              and I'm comfortable jumping between the frontend and the small bits of backend that ship a feature end-to-end.
+            </p>
+            <p>
+              I work mobile-first, care about accessibility, and treat performance as a feature. When I'm not coding, I'm usually
+              breaking something just to understand how it works.
+            </p>
+          </div>
+          <aside class="about-facts reveal">
+            <h3>Quick facts</h3>
+            <ul>
+              <li><span>Location</span><strong>India</strong></li>
+              <li><span>Focus</span><strong>Frontend &amp; Web</strong></li>
+              <li><span>Learning</span><strong>React, Node</strong></li>
+              <li><span>Open to</span><strong>Internships</strong></li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Skills</h2>
-        <div class="skills-grid reveal">
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">JavaScript</div>
-          <div class="skill">React</div>
-          <div class="skill">Node.js</div>
-          <div class="skill">Python</div>
+        <p class="section-eyebrow reveal">02 / Skills</p>
+        <h2 class="section-title reveal">What I work with</h2>
+        <div class="skills-cats">
+          <div class="skill-cat reveal">
+            <h3>Frontend</h3>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Tailwind</span>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <h3>Backend</h3>
+            <div class="chips">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">Python</span>
+              <span class="chip">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <h3>Tools</h3>
+            <div class="chips">
+              <span class="chip">Git &amp; GitHub</span>
+              <span class="chip">VS Code</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Vercel</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">03 / Projects</p>
+        <h2 class="section-title reveal">Selected work</h2>
+        <div class="projects-grid">
+          <article class="card reveal">
+            <div class="card-thumb" aria-hidden="true">
+              <span>01</span>
+            </div>
+            <div class="card-body">
+              <h3>Personal Portfolio</h3>
+              <p>The site you're on — built from scratch with HTML, CSS, and vanilla JS. Mobile-first, accessible, and zero frameworks.</p>
+              <div class="tech-row">
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+                <span class="tech">JS</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small ghost" href="#">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-thumb" aria-hidden="true">
+              <span>02</span>
+            </div>
+            <div class="card-body">
+              <h3>Task Tracker</h3>
+              <p>A lightweight task management UI with filters, local storage persistence, and keyboard shortcuts for power users.</p>
+              <div class="tech-row">
+                <span class="tech">React</span>
+                <span class="tech">Vite</span>
+                <span class="tech">LocalStorage</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small ghost" href="#">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-thumb" aria-hidden="true">
+              <span>03</span>
+            </div>
+            <div class="card-body">
+              <h3>Mini API Service</h3>
+              <p>A small REST API for managing notes, with auth and basic rate limiting. Deployed and documented end-to-end.</p>
+              <div class="tech-row">
+                <span class="tech">Node</span>
+                <span class="tech">Express</span>
+                <span class="tech">MongoDB</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small ghost" href="#">Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / TIMELINE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">04 / Journey</p>
+        <h2 class="section-title reveal">Experience &amp; learning</h2>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="t-dot"></div>
+            <div class="t-content">
+              <span class="t-date">2025 — present</span>
+              <h3>Self-directed Web Development</h3>
+              <p>Building projects to learn modern frontend &amp; backend — focused on shipping, not tutorials.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="t-dot"></div>
+            <div class="t-content">
+              <span class="t-date">2024</span>
+              <h3>Started with HTML, CSS &amp; JavaScript</h3>
+              <p>Picked up the fundamentals of the web platform and shipped my first static pages.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="t-dot"></div>
+            <div class="t-content">
+              <span class="t-date">Education</span>
+              <h3>Student — Computer / IT track</h3>
+              <p>Currently studying while building a portfolio of practical work.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Contact</h2>
-        <p class="reveal">I'm open to internship and collaboration. Send a message and I'll get back to you.</p>
-        <form class="contact-form reveal" action="mailto:youremail@example.com" method="post" enctype="text/plain">
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button class="btn" type="submit">Send</button>
-        </form>
+        <p class="section-eyebrow reveal">05 / Contact</p>
+        <h2 class="section-title reveal">Let's build something</h2>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p>
+              Open to internships, freelance work, and collaboration. Drop a message and I'll usually reply within a day.
+            </p>
+            <ul class="contact-links">
+              <li><span>Email</span><a href="mailto:rajath@example.com">rajath@example.com</a></li>
+              <li><span>GitHub</span><a href="https://github.com/RajathBN" target="_blank" rel="noopener">@RajathBN</a></li>
+              <li><span>LinkedIn</span><a href="#" target="_blank" rel="noopener">/in/rajath-bn</a></li>
+            </ul>
+          </div>
+          <form class="contact-form reveal" action="mailto:rajath@example.com" method="post" enctype="text/plain">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send message →</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Your Name — Built with care.</p>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Rajath BN — Built with care.</p>
+      <p class="footer-tag">Crafted in HTML · CSS · JS</p>
     </div>
   </footer>
 
