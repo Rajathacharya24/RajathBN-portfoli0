@@ -3,233 +3,235 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rajath BN — Developer Portfolio</title>
-  <meta name="description" content="Rajath BN — student developer building clean, fast, and accessible web experiences." />
+  <title>Rajath B N — Full-Stack Developer</title>
+  <meta name="description" content="Rajath B N — Full-stack developer specializing in Spring Boot, React, and microservices. Building clean, scalable web applications." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#home">Skip to content</a>
+  <canvas id="starfield"></canvas>
+  <canvas id="lightParticles"></canvas>
+  <div class="shimmer-line"></div>
 
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
+    <nav class="nav-inner">
       <a class="logo" href="#home">
         <span class="logo-mark">R</span>
         <span class="logo-text">Rajath<span class="dot">.</span></span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav" id="nav" aria-label="Primary">
-        <a href="#about">About</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#" download>Resume</a>
-      </nav>
+      </div>
+      <a class="nav-cta" href="RajathsRE.pdf" download>Resume</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="RajathsRE.pdf" download>Resume</a>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section id="home" class="hero section">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <span class="eyebrow reveal"><span class="status-dot"></span> Available for internships</span>
-          <h1 class="reveal">
-            Hi, I'm <span class="accent">Rajath BN</span>.<br />
-            I build clean, useful web things.
-          </h1>
-          <p class="sub reveal">
-            A tech-focused student crafting interactive, accessible, and performant interfaces with HTML, CSS, JavaScript, and modern frameworks.
-          </p>
-          <div class="cta reveal">
-            <a class="btn" href="#projects">View my work →</a>
-            <a class="btn ghost" href="#contact">Get in touch</a>
-          </div>
-          <ul class="hero-meta reveal">
-            <li><strong>3+</strong><span>Projects shipped</span></li>
-            <li><strong>6+</strong><span>Tech stack</span></li>
-            <li><strong>100%</strong><span>Self-taught</span></li>
-          </ul>
+    <section id="home" class="hero">
+      <div class="hero-rings">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="dot-glow"></span> Open to opportunities</p>
+        <h1 class="hero-title">I build <span class="accent">full-stack</span> web applications.</h1>
+        <p class="hero-sub">Full-stack Java developer specializing in Spring Boot, microservices, and reactive architectures. Currently building FinSight AI — a document intelligence platform with 7 microservices.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/Rajathacharya24" target="_blank" rel="noopener">View my work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
         </div>
-        <div class="hero-art reveal">
-          <div class="avatar-frame">
-            <div class="avatar">
-              <span class="avatar-initials">RB</span>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section section-border">
+      <div class="frame">
+        <div class="section-header">
+          <p class="eyebrow">Experience & Projects</p>
+          <h2 class="section-title">What I've built and where I've worked.</h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Experience -->
+          <article class="project-card">
+            <span class="card-number">01</span>
+            <h3 class="card-title">Full-Stack Java Intern</h3>
+            <span class="card-status">JSpiders, Bangalore</span>
+            <p class="card-desc">Developed full-stack web applications using Spring Boot, React, and MySQL. Built and integrated RESTful APIs for seamless frontend-backend communication. Designed reusable UI components and optimized website performance.</p>
+            <div class="card-tags">
+              <span>Spring Boot</span><span>React</span><span>MySQL</span><span>REST APIs</span>
             </div>
-            <div class="floating-badge badge-1">{ }</div>
-            <div class="floating-badge badge-2">&lt;/&gt;</div>
-            <div class="floating-badge badge-3">★</div>
+          </article>
+
+          <article class="project-card">
+            <span class="card-number">02</span>
+            <h3 class="card-title">Freelance Developer</h3>
+            <span class="card-status">Self-Employed</span>
+            <p class="card-desc">Built a full-stack cooperative website for Divyachethana Cooperative Society with PHP/MySQL backend, secure admin CMS, multi-language support (Kannada/English), and real-time FD/RD interest calculator.</p>
+            <div class="card-tags">
+              <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <span class="card-number">03</span>
+            <h3 class="card-title">GHS Bilalukoppa Website</h3>
+            <span class="card-status">Client Project</span>
+            <p class="card-desc">Built a responsive, interactive school website with clean UI and mobile-friendly design. Focused on smooth user experience with interactive elements and cross-device compatibility.</p>
+            <div class="card-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </article>
+
+          <!-- Projects -->
+          <article class="project-card featured">
+            <span class="card-number">04</span>
+            <h3 class="card-title">FinSight AI</h3>
+            <span class="card-status">Flagship Project</span>
+            <p class="card-desc">Financial Document Intelligence Platform — 7 microservices using Spring Boot 3.5 and Spring Cloud with Eureka service discovery and API Gateway. Event-driven pipeline with Apache Kafka, JWT auth, Spring AI with pgvector for RAG-based document intelligence. 14 Docker containers, CI/CD via GitHub Actions.</p>
+            <div class="card-tags">
+              <span>Java 21</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span><span>Docker</span><span>Spring AI</span>
+            </div>
+            <a class="card-link" href="https://github.com/RajathBN" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <span class="card-number">05</span>
+            <h3 class="card-title">Trip Planner</h3>
+            <span class="card-status">Full-Stack App</span>
+            <p class="card-desc">Full-stack travel booking application with Spring Boot RESTful API and PostgreSQL backend. Responsive frontend with Bootstrap 5, modal-based UI, and Testcontainers for integration testing.</p>
+            <div class="card-tags">
+              <span>Spring Boot</span><span>PostgreSQL</span><span>Bootstrap</span><span>Docker</span>
+            </div>
+            <a class="card-link" href="https://github.com/RajathBN" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-border bg-subtle">
+      <div class="frame">
+        <div class="section-header">
+          <p class="eyebrow">Skills</p>
+          <h2 class="section-title">Technical skills and tools I work with.</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-col">
+            <h4>Languages</h4>
+            <ul class="skill-list">
+              <li>Java</li><li>SQL</li><li>Python</li><li>PHP</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4>Frameworks</h4>
+            <ul class="skill-list">
+              <li>Spring Boot</li><li>REST APIs</li><li>Microservices</li><li>Hibernate</li><li>React</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4>Tools</h4>
+            <ul class="skill-list">
+              <li>Git &amp; GitHub</li><li>Docker</li><li>PostgreSQL</li><li>MongoDB</li><li>IntelliJ IDEA</li><li>VS Code</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <p class="section-eyebrow reveal">01 / About</p>
-        <h2 class="section-title reveal">A quick intro</h2>
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p>
-              I'm a student focused on technology and web development. I enjoy solving real problems through thoughtful UX and clean code,
-              and I'm comfortable jumping between the frontend and the small bits of backend that ship a feature end-to-end.
-            </p>
-            <p>
-              I work mobile-first, care about accessibility, and treat performance as a feature. When I'm not coding, I'm usually
-              breaking something just to understand how it works.
-            </p>
-          </div>
-          <aside class="about-facts reveal">
-            <h3>Quick facts</h3>
-            <ul>
-              <li><span>Location</span><strong>India</strong></li>
-              <li><span>Focus</span><strong>Frontend &amp; Web</strong></li>
-              <li><span>Learning</span><strong>React, Node</strong></li>
-              <li><span>Open to</span><strong>Internships</strong></li>
-            </ul>
+    <section id="about" class="section section-border">
+      <div class="frame">
+        <div class="about-layout">
+          <aside class="about-stats">
+            <p class="eyebrow">Quick facts</p>
+            <dl>
+              <div class="stat-row"><dt>Experience</dt><dd>1+</dd></div>
+              <div class="stat-row"><dt>Projects</dt><dd>5+</dd></div>
+              <div class="stat-row"><dt>Education</dt><dd>BCA</dd></div>
+              <div class="stat-row"><dt>Location</dt><dd>India</dd></div>
+            </dl>
           </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="container">
-        <p class="section-eyebrow reveal">02 / Skills</p>
-        <h2 class="section-title reveal">What I work with</h2>
-        <div class="skills-cats">
-          <div class="skill-cat reveal">
-            <h3>Frontend</h3>
-            <div class="chips">
-              <span class="chip">HTML</span>
-              <span class="chip">CSS</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">React</span>
-              <span class="chip">Tailwind</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal">
-            <h3>Backend</h3>
-            <div class="chips">
-              <span class="chip">Node.js</span>
-              <span class="chip">Express</span>
-              <span class="chip">Python</span>
-              <span class="chip">REST APIs</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal">
-            <h3>Tools</h3>
-            <div class="chips">
-              <span class="chip">Git &amp; GitHub</span>
-              <span class="chip">VS Code</span>
-              <span class="chip">Figma</span>
-              <span class="chip">Vercel</span>
+          <div class="about-text">
+            <h2 class="section-title">Full-stack developer with a passion for building scalable systems.</h2>
+            <div class="about-body">
+              <p>I'm Rajath B N, a Bachelor of Computer Applications student at Tunga Mahavidyalaya, Thirthahalli. I specialize in full-stack Java development with Spring Boot, microservices architectures, and event-driven systems.</p>
+              <p>My flagship project, FinSight AI, is a financial document intelligence platform with 7 microservices, Apache Kafka event pipelines, and Spring AI integration for RAG-based document intelligence. I've also delivered freelance projects including a cooperative society website with multi-language support.</p>
+              <p>I hold certifications in Java/Spring Boot (Udemy) and AI Fundamentals (IBM). Currently seeking internship and full-time opportunities in full-stack or backend development.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <p class="section-eyebrow reveal">03 / Projects</p>
-        <h2 class="section-title reveal">Selected work</h2>
-        <div class="projects-grid">
-          <article class="card reveal">
-            <div class="card-thumb" aria-hidden="true">
-              <span>01</span>
-            </div>
-            <div class="card-body">
-              <h3>Personal Portfolio</h3>
-              <p>The site you're on — built from scratch with HTML, CSS, and vanilla JS. Mobile-first, accessible, and zero frameworks.</p>
-              <div class="tech-row">
-                <span class="tech">HTML</span>
-                <span class="tech">CSS</span>
-                <span class="tech">JS</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small ghost" href="#">Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card-thumb" aria-hidden="true">
-              <span>02</span>
-            </div>
-            <div class="card-body">
-              <h3>Task Tracker</h3>
-              <p>A lightweight task management UI with filters, local storage persistence, and keyboard shortcuts for power users.</p>
-              <div class="tech-row">
-                <span class="tech">React</span>
-                <span class="tech">Vite</span>
-                <span class="tech">LocalStorage</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small ghost" href="#">Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card-thumb" aria-hidden="true">
-              <span>03</span>
-            </div>
-            <div class="card-body">
-              <h3>Mini API Service</h3>
-              <p>A small REST API for managing notes, with auth and basic rate limiting. Deployed and documented end-to-end.</p>
-              <div class="tech-row">
-                <span class="tech">Node</span>
-                <span class="tech">Express</span>
-                <span class="tech">MongoDB</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small ghost" href="#">Source</a>
-              </div>
-            </div>
-          </article>
+    <!-- JOURNEY -->
+    <section class="section section-border bg-subtle">
+      <div class="frame">
+        <div class="section-header">
+          <p class="eyebrow">Journey</p>
+          <h2 class="section-title">Education and milestones.</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE / TIMELINE -->
-    <section id="experience" class="section">
-      <div class="container">
-        <p class="section-eyebrow reveal">04 / Journey</p>
-        <h2 class="section-title reveal">Experience &amp; learning</h2>
-        <ol class="timeline">
-          <li class="timeline-item reveal">
-            <div class="t-dot"></div>
-            <div class="t-content">
-              <span class="t-date">2025 — present</span>
-              <h3>Self-directed Web Development</h3>
-              <p>Building projects to learn modern frontend &amp; backend — focused on shipping, not tutorials.</p>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <span class="timeline-num">01</span>
+            <div>
+              <span class="timeline-date">2024 — Present</span>
+              <h3>Full-Stack Java Intern — JSpiders, Bangalore</h3>
+              <p>Developing full-stack applications with Spring Boot, React, and MySQL. Building RESTful APIs and optimizing performance.</p>
             </div>
           </li>
-          <li class="timeline-item reveal">
-            <div class="t-dot"></div>
-            <div class="t-content">
-              <span class="t-date">2024</span>
-              <h3>Started with HTML, CSS &amp; JavaScript</h3>
-              <p>Picked up the fundamentals of the web platform and shipped my first static pages.</p>
+          <li class="timeline-item">
+            <span class="timeline-num">02</span>
+            <div>
+              <span class="timeline-date">2024</span>
+              <h3>Freelance Software Developer</h3>
+              <p>Delivered end-to-end projects including Divyachethana Cooperative Society website with PHP/MySQL and GHS Bilalukoppa school website.</p>
             </div>
           </li>
-          <li class="timeline-item reveal">
-            <div class="t-dot"></div>
-            <div class="t-content">
-              <span class="t-date">Education</span>
-              <h3>Student — Computer / IT track</h3>
-              <p>Currently studying while building a portfolio of practical work.</p>
+          <li class="timeline-item">
+            <span class="timeline-num">03</span>
+            <div>
+              <span class="timeline-date">2023 — Present</span>
+              <h3>Bachelor of Computer Applications</h3>
+              <p>Tunga Mahavidyalaya, Thirthahalli. Studying computer science while building real-world projects.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-num">04</span>
+            <div>
+              <span class="timeline-date">Certificates</span>
+              <h3>Java, Spring Framework, Spring Boot — Udemy</h3>
+              <p>Comprehensive certification in Java ecosystem and Spring Boot development.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-num">05</span>
+            <div>
+              <span class="timeline-date">Certificates</span>
+              <h3>Artificial Intelligence Fundamentals — IBM</h3>
+              <p>Foundational knowledge in AI concepts and applications.</p>
             </div>
           </li>
         </ol>
@@ -237,44 +239,63 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <p class="section-eyebrow reveal">05 / Contact</p>
-        <h2 class="section-title reveal">Let's build something</h2>
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <p>
-              Open to internships, freelance work, and collaboration. Drop a message and I'll usually reply within a day.
-            </p>
-            <ul class="contact-links">
-              <li><span>Email</span><a href="mailto:rajath@example.com">rajath@example.com</a></li>
-              <li><span>GitHub</span><a href="https://github.com/RajathBN" target="_blank" rel="noopener">@RajathBN</a></li>
-              <li><span>LinkedIn</span><a href="#" target="_blank" rel="noopener">/in/rajath-bn</a></li>
-            </ul>
+    <section id="contact" class="section section-border">
+      <div class="frame">
+        <div class="contact-layout">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 class="section-title">Let's connect and build something great.</h2>
+            <p class="contact-note">Open to internships, full-time roles, and collaboration. Feel free to reach out — I usually reply within a day.</p>
           </div>
-          <form class="contact-form reveal" action="mailto:rajath@example.com" method="post" enctype="text/plain">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" required>
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" required>
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-            <button class="btn" type="submit">Send message →</button>
-          </form>
+          <div>
+            <ul class="contact-links">
+              <li><span class="contact-label">Email</span><a href="mailto:rrajath227@gmail.com">rrajath227@gmail.com</a></li>
+              <li><span class="contact-label">Phone</span><a href="tel:+917411040945">+91 7411040945</a></li>
+              <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/rajath-acharya24/" target="_blank" rel="noopener">rajath-acharya24</a></li>
+              <li><span class="contact-label">GitHub</span><a href="https://github.com/RajathBN" target="_blank" rel="noopener">@RajathBN</a></li>
+            </ul>
+            <form class="contact-form" action="mailto:rrajath227@gmail.com" method="post" enctype="text/plain">
+              <label><span>Name</span><input type="text" name="name" required></label>
+              <label><span>Email</span><input type="email" name="email" required></label>
+              <label><span>Message</span><textarea name="message" rows="4" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Rajath BN — Built with care.</p>
+    <div class="frame footer-grid">
+      <div>
+        <a class="logo" href="#home">
+          <span class="logo-mark">R</span>
+          <span class="logo-text">Rajath<span class="dot">.</span></span>
+        </a>
+        <p class="footer-desc">Full-stack Java developer specializing in Spring Boot and microservices. Thirthahalli, India.</p>
+        <a href="mailto:rrajath227@gmail.com" class="footer-email">rrajath227@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <h5>Site</h5>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Elsewhere</h5>
+        <ul>
+          <li><a href="https://github.com/RajathBN" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/rajath-acharya24/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="frame footer-bottom">
+      <p>© <span id="year"></span> Rajath B N</p>
       <p class="footer-tag">Crafted in HTML · CSS · JS</p>
     </div>
   </footer>
