@@ -1,11 +1,4 @@
-# Robots.txt for Rajath B N Portfolio
-# https://rajathacharya24.github.io/RajathBN-portfoli0/
-
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://rajathacharya24.github.io/RajathBN-portfoli0/sitemap.xml
-
-# Crawl-delay (optional, for polite crawling)
-Crawl-delay: 1
