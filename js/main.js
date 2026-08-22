@@ -287,3 +287,49 @@ if (!('scrollBehavior' in document.documentElement.style)) {
     });
   });
 }
+
+// ---------- GitHub Projects Fetch ----------
+(async function() {
+  const container = document.getElementById('github-projects-container');
+  if (!container) return;
+  
+  try {
+    const res = await fetch('https://api.github.com/users/Rajathacharya24/repos?sort=updated&per_page=10');
+    if (!res.ok) throw new Error('Network response was not ok');
+    
+    let repos = await res.json();
+    repos = repos.filter(repo => !repo.fork).slice(0, 4);
+    
+    container.innerHTML = '';
+    
+    repos.forEach((repo, idx) => {
+      const card = document.createElement('article');
+      card.className = 'project-card reveal';
+      
+      const num = String(idx + 1).padStart(2, '0');
+      const lang = repo.language || 'Code';
+      const desc = repo.description || 'No description provided.';
+      
+      card.innerHTML = `
+        <span class="card-number">${num}</span>
+        <h3 class="card-title">${repo.name}</h3>
+        <span class="card-status">Open Source</span>
+        <p class="card-desc">${desc}</p>
+        <div class="card-tags">
+          <span>${lang}</span>
+          ${repo.stargazers_count ? `<span>⭐ ${repo.stargazers_count}</span>` : ''}
+        </div>
+        <a class="card-link" href="${repo.html_url}" target="_blank" rel="noopener">View Repository</a>
+      `;
+      container.appendChild(card);
+      
+      // Observe for scroll reveal
+      if (typeof revealObs !== 'undefined') {
+        revealObs.observe(card);
+      }
+    });
+  } catch (error) {
+    container.innerHTML = '<p class="card-desc" style="text-align: center; width: 100%; grid-column: 1 / -1;">Failed to load projects from GitHub.</p>';
+    console.error('Error fetching GitHub repos:', error);
+  }
+})();

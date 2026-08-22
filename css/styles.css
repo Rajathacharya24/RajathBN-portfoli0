@@ -529,103 +529,95 @@ img {
 }
 
 .project-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
-  transition: all .4s var(--ease);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
+  background: rgba(20, 20, 22, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.4s var(--ease);
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
 .project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
   background: linear-gradient(90deg, var(--accent), transparent);
-  opacity: 0;
-  transition: opacity .3s;
+  opacity: 0; transition: opacity 0.4s var(--ease);
 }
-
-.project-card:hover::before {
-  opacity: 1;
+.project-card.featured {
+  border-color: rgba(172, 157, 128, 0.15);
+  background: rgba(172, 157, 128, 0.03);
 }
-
+.project-card.featured::before {
+  opacity: 0.5;
+}
+.project-card:hover::before { opacity: 1; }
 .project-card:hover {
-  border-color: rgba(172, 157, 128, .2);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, .3);
+  border-color: rgba(172, 157, 128, 0.3);
+  transform: translateY(-6px);
+  background: rgba(26, 26, 30, 0.8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(172, 157, 128, 0.08);
 }
-
 .card-number {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--accent-dim);
-  margin-bottom: 16px;
+  font-size: 13px; font-weight: 600; color: var(--accent-dim);
+  margin-bottom: 20px;
+  background: rgba(172,157,128,0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  align-self: flex-start;
 }
-
 .card-title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px; font-weight: 700;
+  color: #fff;
   margin: 0 0 8px;
+  letter-spacing: -0.01em;
 }
-
 .card-status {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-
-.card-desc {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--muted);
-  flex: 1;
-  margin: 0 0 16px;
-}
-
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--accent);
   margin-bottom: 16px;
+  font-weight: 500;
 }
-
+.card-desc {
+  font-size: 15px; line-height: 1.7;
+  color: #d1cbc3; flex: 1;
+  margin: 0 0 24px;
+}
+.card-tags {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 20px;
+}
 .card-tags span {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--accent-dim);
-  background: rgba(172, 157, 128, .05);
-  border: 1px solid rgba(172, 157, 128, .1);
-  padding: 3px 10px;
-  border-radius: 6px;
+  font-size: 12px; font-weight: 500;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 4px 12px; border-radius: 8px;
+  transition: all 0.3s var(--ease);
 }
-
+.project-card:hover .card-tags span {
+  background: rgba(172, 157, 128, 0.08);
+  border-color: rgba(172, 157, 128, 0.2);
+  color: #fff;
+}
 .card-link {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px; font-weight: 600;
+  color: var(--text); display: inline-flex;
+  align-items: center; gap: 6px;
+  transition: gap .3s var(--ease), color .3s var(--ease);
+  margin-top: auto;
+}
+.card-link:hover { 
+  gap: 10px; 
   color: var(--accent);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: gap .2s var(--ease);
 }
-
-.card-link:hover {
-  gap: 8px;
-}
-
-.card-link::after {
-  content: '→';
-}
+.card-link::after { content: '→'; font-size: 16px; line-height: 1; }
 
 /* ============================
    SKILLS — list columns
