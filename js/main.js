@@ -28,7 +28,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ---------- Starfield ----------
-(function() {
+(function () {
   const canvas = document.getElementById('starfield');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -82,7 +82,7 @@ document.addEventListener('keydown', (e) => {
 })();
 
 // ---------- Light Particles ----------
-(function() {
+(function () {
   const canvas = document.getElementById('lightParticles');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -131,7 +131,7 @@ document.addEventListener('keydown', (e) => {
       }
 
       if (this.life <= 0 || this.x < -10 || this.x > canvas.width + 10 ||
-          this.y < -10 || this.y > canvas.height + 10) {
+        this.y < -10 || this.y > canvas.height + 10) {
         this.reset();
       }
     }
@@ -219,7 +219,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ---------- 3D Card Tilt ----------
-(function() {
+(function () {
   const cards = document.querySelectorAll('.project-card');
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -239,7 +239,7 @@ window.addEventListener('scroll', () => {
 })();
 
 // ---------- 3D Hero Parallax ----------
-(function() {
+(function () {
   const hero = document.querySelector('.hero');
   const content = document.querySelector('.hero-content');
   if (!hero || !content || window.innerWidth < 768) return;
@@ -256,7 +256,7 @@ window.addEventListener('scroll', () => {
 })();
 
 // ---------- 3D Ring Mouse Follow ----------
-(function() {
+(function () {
   const rings = document.querySelectorAll('.ring');
   const hero = document.querySelector('.hero');
   if (!hero || rings.length === 0) return;
@@ -278,7 +278,7 @@ window.addEventListener('scroll', () => {
 // ---------- Smooth scroll ----------
 if (!('scrollBehavior' in document.documentElement.style)) {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
+    a.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
       if (href.length > 1) {
         const el = document.querySelector(href);
