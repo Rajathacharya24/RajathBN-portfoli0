@@ -156,6 +156,28 @@ img { max-width: 100%; display: block; }
 }
 .hero-content { max-width: 680px; position: relative; z-index: 1; }
 
+/* Profile Image */
+.hero-image-wrapper {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+.hero-profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  padding: 4px;
+  background-color: var(--bg);
+  box-shadow: 0 0 20px rgba(172, 157, 128, 0.15);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.hero-profile-img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(172, 157, 128, 0.3);
+}
+
 /* Animated rings behind hero */
 .hero-rings {
   position: absolute; top: 50%; left: 50%;
