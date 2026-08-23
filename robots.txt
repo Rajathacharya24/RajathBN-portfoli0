@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rajath-bn-portfolio-lriqzwj95-rajathbn.vercel.app/sitemap.xml
+Sitemap: https://rajath-bn-portfoli0.vercel.app/sitemap.xml
